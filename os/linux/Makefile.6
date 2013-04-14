@@ -148,14 +148,25 @@ endif
 
 clean:
 	rm -f ../../common/*.o
-	rm -f ../../common/.*.{cmd,flags,d}
-	rm -f ../../os/linux/*.{o,ko,mod.{o,c}}
-	rm -f ../../os/linux/.*.{cmd,flags,d}
+	rm -f ../../common/.*.cmd 
+	rm -f ../../common/.*.flags
+	rm -f ../../common/.*.d
+	rm -f ../../os/linux/*.o
+	rm -f ../../os/linux/*.ko
+	rm -f ../../os/linux/*.mod.o
+	rm -f ../../os/linux/*.mod.c
+	rm -f ../../os/linux/.*.cmd
+	rm -f ../../os/linux/.*.flags
+	rm -f ../../os/linux/.*.d
 	rm -fr ../../os/linux/.tmp_versions
 	rm -f ../../chips/*.o
-	rm -f ../../chips/.*.{cmd,flags,d}
+	rm -f ../../chips/.*cmd
+	rm -f ../../chips/.*.flags
+	rm -f ../../chips/.*.d
 	rm -f ../../sta/*.o
-	rm -f ../../sta/.*.{cmd,flags,d}
+	rm -f ../../sta/.*.cmd
+	rm -f ../../sta/.*.flags
+	rm -f ../../sta/.*.d
 
 install:
 	rm -rf $(DAT_PATH)

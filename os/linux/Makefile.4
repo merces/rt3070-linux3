@@ -156,6 +156,7 @@ clean:
 	rm -f $(RT28xx_DIR)/chips/.*.{cmd,flags,d}
 	rm -f $(RT28xx_DIR)/sta/*.o
 	rm -f $(RT28xx_DIR)/sta/.*.{cmd,flags,d}
+	$(shell find . -type f -name '*.cmd' -exec rm {} +;)
 
 install:
 	rm -rf $(DAT_PATH)
